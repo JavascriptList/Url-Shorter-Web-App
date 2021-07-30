@@ -8,53 +8,37 @@
   <title>Document</title>
 </head>
 <style>
-    .mainPage {
-        background-color:rgb(1, 10, 8);
-    }
-    .title{
-        color:white;
-        margin-top: 2rem;
-        text-align: center;
-    }
-    .btn{
-        width: 20%;
-        margin-left:  25.3rem;
-        margin-top: 3rem;
-    }
-    .table{
-        margin-top: 7rem;
-    }
-    .row-heading{
-        color: white;
-    }
-    .form-control{
-        margin-top:1.2rem
-    }
-    .dashboard{
-        margin-left: 2.3rem;
-        margin-top: 1.2rem;
-    }
-    .dashboard-title{
-      color:white;
-    }
+  .home_main{
+    background-color: black;
+  }
+  .title{
+    color: white;
+    margin-top:3.5rem;
+    text-align: center;
+  }
+  .table{
+    margin-top:6.5rem;
+  }
+  .btn{
+    width:25%;
+    margin-top:1.8rem;
+    margin-left:23.6rem;
+  }
 </style>
-<body class="mainPage">
+<body class="home_main">
   <div class="container">
     <h1 class="title">URL Shorter App</h1>
-    <form action="/shortUrls" method="POST" class="my-4 form-inline" top="18px">
-      <input required placeholder="Enter a Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
+    <form action="/shortUrls" method="POST" class="my-4 form-inline">
+      <label for="fullUrl" class="sr-only">Url</label>
+      <input required placeholder="Enter a Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2"> 
     </form>
-    <button class="btn btn-success" type="submit">Click to generate</button>
-
-
-    <h2 class="dashboard-title">Details </h2>
-    
+    <button class="btn btn-success" type="submit">Submit</button>
     <table class="table table-striped table-responsive">
       <thead>
-        <tr class="row-heading">
+        <tr>
           <th>Full URL</th>
           <th>Short URL</th>
-          <th>No of Clicks</th>
+          <th>Clicks</th>
         </tr>
       </thead>
       <tbody>
@@ -68,6 +52,5 @@
       </tbody>
     </table>
   </div>
-
 </body>
 </html>
