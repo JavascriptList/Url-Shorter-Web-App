@@ -31,4 +31,9 @@ app.get('/:shortUrl', async (req, res) => {
   res.redirect(shortUrl.full)
 })
 
+app.get('/:shortUrl/details', async(req, res) => {
+  const detailsurl = await ShortUrl.findOne({ short: req.params.shortUrl })
+  res.render('Details', {detailsurl: detailsurl})
+})
+
 app.listen(process.env.PORT || 5000);
